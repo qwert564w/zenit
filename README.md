@@ -1,30 +1,59 @@
-# Zenith — портированный Fabric-проект
+# Zenith (Fabric 1.21.11)
 
-Исходный код Zenith, приведённый в читаемый вид и портированный на Minecraft
-1.21.11. Java-код находится в `src/main/java`, ресурсы — в
-`src/main/resources`.
+Порт клиента Zenith под Minecraft **1.21.11** (Fabric).
+
+Исходники: `src/main/java`  
+Ресурсы: `src/main/resources`  
+Зависимости в `libs/`.
 
 ## Требования
 
-- JDK 21
-- Windows PowerShell или cmd
+- **JDK 21** (Temurin / Corretto / Oracle)
+- Windows: PowerShell или cmd  
+- Интернет для первой сборки (Minecraft, Yarn, Loom)
 
-Gradle отдельно устанавливать не нужно: wrapper уже включён в проект.
+Проверка Java:
+```powershell
+java -version
+```
+Должно быть `21.x`.
 
 ## Сборка
 
 ```powershell
-.\gradlew.bat build
+.\gradlew.bat clean build
 ```
 
-Готовый мод появится в `build/libs/zenith-1.0-SNAPSHOT.jar`.
+Готовый мод:
+```text
+build\libs\zenith-1.0-SNAPSHOT.jar
+```
 
-## Запуск клиента для разработки
+Если сборка «висит» — смотри лог в консоли. Первая сборка может занять 5–20 минут.
+
+Для подробного лога:
+```powershell
+.\gradlew.bat build --info
+```
+
+## Установка (jar → mods)
+
+1. Установи Minecraft **1.21.11**
+2. Установи **Fabric Loader** для 1.21.11
+3. Скопируй `zenith-1.0-SNAPSHOT.jar` в папку `mods`
+4. Запусти профиль **Fabric 1.21.11**
+
+> Просто открыть jar двойным кликом нельзя — это мод для Fabric, не лаунчер.
+
+## Dev-клиент
 
 ```powershell
 .\gradlew.bat runClient
 ```
 
-Рабочая директория тестового клиента — `run`.
+Рабочая папка: `run/`.
 
-Проект компилируется, собирается и запускается через Fabric Loom.
+## Примечания
+
+- Нужен Fabric API (обычно подтягивается зависимостями / кладётся рядом при необходимости)
+- Не коммить папки `build/`, `.gradle/`, `run/`
