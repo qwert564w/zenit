@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "id": "zenith",
-  "version": "1.0-SNAPSHOT",
-  "name": "Z3nith By K3ntSofts",
-  "description": "",
+  "version": "${version}",
+  "name": "Zenith",
+  "description": "Zenith client for Minecraft 1.21.11 (Fabric). Put the built jar into the mods folder with Fabric Loader.",
   "authors": [],
   "contact": {},
   "license": "All-Rights-Reserved",
@@ -19,8 +19,8 @@
   ],
   "accessWidener": "zenith.accesswidener",
   "depends": {
-    "fabricloader": "\u003e\u003d0.19.3",
-    "fabric-api": "\u003e\u003d0.141.6+1.21.11",
+    "fabricloader": ">=0.19.3",
+    "fabric-api": ">=0.141.6+1.21.11",
     "minecraft": "1.21.11",
     "zenith-addon-api": "*",
     "zenith-addon-runtime": "*"
