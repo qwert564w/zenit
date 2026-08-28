@@ -3,12 +3,6 @@ package org.zenith.module.misc;
 import org.zenith.module.Category;
 import org.zenith.module.Module;
 import org.zenith.module.ModuleInfo;
-import org.zenith.module.ModuleManager;
-import org.zenith.module.combat.*;
-import org.zenith.module.movement.*;
-import org.zenith.module.player.*;
-import org.zenith.module.render.*;
-import org.zenith.module.misc.*;
 
 import com.darkmagician6.eventapi.EventTarget;
 import java.util.ArrayList;
@@ -164,7 +158,6 @@ public final class PathTeleport extends Module {
       float f = minecraftClient3.getWindow().getScaledWidth() - Fonts.NEW_MEDIUM.getWidth(var2, 10.0F) - 20.0F;
       var1.WarpFarm().drawText(Fonts.NEW_MEDIUM.getFont(10.0F), var2, f, var3, ArgbColor.var11934);
    }
-
 
    public record Snapshot(double double32, double double33, double double34, float float69, float float70, boolean boolean82) {
       public double x() {
