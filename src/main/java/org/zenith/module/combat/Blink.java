@@ -3,12 +3,6 @@ package org.zenith.module.combat;
 import org.zenith.module.Category;
 import org.zenith.module.Module;
 import org.zenith.module.ModuleInfo;
-import org.zenith.module.ModuleManager;
-import org.zenith.module.combat.*;
-import org.zenith.module.movement.*;
-import org.zenith.module.player.*;
-import org.zenith.module.render.*;
-import org.zenith.module.misc.*;
 
 import com.darkmagician6.eventapi.EventTarget;
 import java.util.HashSet;
@@ -289,7 +283,6 @@ public final class Blink extends Module {
       this.vec3d6 = null;
       this.set6.clear();
    }
-
 
    public record QueuedPacket(Packet<?> packet4, Vec3d vec3d29) {
       public Packet<?> call076() {
