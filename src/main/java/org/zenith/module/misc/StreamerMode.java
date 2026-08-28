@@ -4,11 +4,6 @@ import org.zenith.module.Category;
 import org.zenith.module.Module;
 import org.zenith.module.ModuleInfo;
 import org.zenith.module.ModuleManager;
-import org.zenith.module.combat.*;
-import org.zenith.module.movement.*;
-import org.zenith.module.player.*;
-import org.zenith.module.render.*;
-import org.zenith.module.misc.*;
 
 import com.darkmagician6.eventapi.EventTarget;
 import java.util.ArrayList;
@@ -441,7 +436,6 @@ public final class StreamerMode extends Module {
 
       return mutabletext;
    }
-
 
    public record Replacement(String string60, Text text6, Text text7) {
       public String call136() {
