@@ -3,13 +3,6 @@ package org.zenith.module.movement;
 import org.zenith.module.Category;
 import org.zenith.module.Module;
 import org.zenith.module.ModuleInfo;
-import org.zenith.module.ModuleManager;
-import org.zenith.module.combat.*;
-import org.zenith.module.movement.*;
-import org.zenith.module.player.*;
-import org.zenith.module.render.*;
-import org.zenith.module.misc.*;
-
 
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import com.darkmagician6.eventapi.EventTarget;
@@ -142,7 +135,6 @@ public final class Velocity extends Module {
          && var1 instanceof EntityVelocityUpdateS2CPacket entityvelocityupdates2cpacket
          && entityvelocityupdates2cpacket.getEntityId() == minecraftClient3.player.getId();
    }
-
 
    public static class Mode {
       public final Packet<?> packet2;
