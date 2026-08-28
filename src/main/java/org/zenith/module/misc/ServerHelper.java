@@ -3,13 +3,6 @@ package org.zenith.module.misc;
 import org.zenith.module.Category;
 import org.zenith.module.Module;
 import org.zenith.module.ModuleInfo;
-import org.zenith.module.ModuleManager;
-import org.zenith.module.combat.*;
-import org.zenith.module.movement.*;
-import org.zenith.module.player.*;
-import org.zenith.module.render.*;
-import org.zenith.module.misc.*;
-
 
 import java.util.function.Predicate;
 import com.darkmagician6.eventapi.EventTarget;
@@ -1191,7 +1184,6 @@ public final class ServerHelper extends Module {
          var0 -> var0.getStack().getItem() instanceof BlockItem blockitem && blockitem.getBlock() instanceof ShulkerBoxBlock
       );
    }
-
 
    public record HotkeyAction(Item item3, KeySetting stringSetting2, float float93, BooleanValue var4, Predicate<Slot> predicate) {
       public HotkeyAction(Item var1, KeySetting var2, float var3, BooleanValue var4) {
