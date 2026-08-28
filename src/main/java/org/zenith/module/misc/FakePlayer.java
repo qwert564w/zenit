@@ -3,12 +3,6 @@ package org.zenith.module.misc;
 import org.zenith.module.Category;
 import org.zenith.module.Module;
 import org.zenith.module.ModuleInfo;
-import org.zenith.module.ModuleManager;
-import org.zenith.module.combat.*;
-import org.zenith.module.movement.*;
-import org.zenith.module.player.*;
-import org.zenith.module.render.*;
-import org.zenith.module.misc.*;
 
 import com.darkmagician6.eventapi.EventTarget;
 import com.mojang.authlib.GameProfile;
@@ -310,7 +304,6 @@ public class FakePlayer extends Module {
          new EntityStatusS2CPacket(this.otherClientPlayerEntity, (byte)35).apply(minecraftClient3.player.networkHandler);
       }
    }
-
 
    public record Snapshot(double double42, double double43, double double44, float float87, float float88, boolean boolean113, boolean boolean114) {
       public double x() {
