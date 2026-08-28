@@ -3,12 +3,6 @@ package org.zenith.module.combat;
 import org.zenith.module.Category;
 import org.zenith.module.Module;
 import org.zenith.module.ModuleInfo;
-import org.zenith.module.ModuleManager;
-import org.zenith.module.combat.*;
-import org.zenith.module.movement.*;
-import org.zenith.module.player.*;
-import org.zenith.module.render.*;
-import org.zenith.module.misc.*;
 
 import com.darkmagician6.eventapi.EventTarget;
 import java.util.ArrayList;
@@ -396,7 +390,6 @@ public final class FakeLag extends Module {
    public void call012() {
       this.queue3.clear();
    }
-
 
    public record QueuedPacket(Packet<?> packet5, Vec3d vec3d31, long long119) {
       public QueuedPacket(Packet<?> var1, Vec3d var2) {
