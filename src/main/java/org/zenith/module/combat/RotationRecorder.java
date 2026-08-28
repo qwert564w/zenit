@@ -3,13 +3,6 @@ package org.zenith.module.combat;
 import org.zenith.module.Category;
 import org.zenith.module.Module;
 import org.zenith.module.ModuleInfo;
-import org.zenith.module.ModuleManager;
-import org.zenith.module.combat.*;
-import org.zenith.module.movement.*;
-import org.zenith.module.player.*;
-import org.zenith.module.render.*;
-import org.zenith.module.misc.*;
-
 
 import java.time.Instant;
 import net.minecraft.entity.EntityPose;
@@ -1596,7 +1589,6 @@ public final class RotationRecorder extends Module {
    public boolean Easing(Vec3d var1) {
       return var1 != null && this.isFinite((float)var1.x) && this.isFinite((float)var1.y) && this.isFinite((float)var1.z);
    }
-
 
    public static final class Session {
       public final long long95;
