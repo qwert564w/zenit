@@ -3,13 +3,6 @@ package org.zenith.module.combat;
 import org.zenith.module.Category;
 import org.zenith.module.Module;
 import org.zenith.module.ModuleInfo;
-import org.zenith.module.ModuleManager;
-import org.zenith.module.combat.*;
-import org.zenith.module.movement.*;
-import org.zenith.module.player.*;
-import org.zenith.module.render.*;
-import org.zenith.module.misc.*;
-
 
 import net.minecraft.client.util.math.MatrixStack;
 import com.darkmagician6.eventapi.EventTarget;
@@ -813,7 +806,6 @@ public final class AutoSwap extends Module {
       this.long24 = 0L;
       this.CloudResponse(false);
    }
-
 
    public static final class ColorPair {
       public final ArgbColor var11931;
