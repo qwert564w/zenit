@@ -3,12 +3,6 @@ package org.zenith.module.misc;
 import org.zenith.module.Category;
 import org.zenith.module.Module;
 import org.zenith.module.ModuleInfo;
-import org.zenith.module.ModuleManager;
-import org.zenith.module.combat.*;
-import org.zenith.module.movement.*;
-import org.zenith.module.player.*;
-import org.zenith.module.render.*;
-import org.zenith.module.misc.*;
 
 import com.darkmagician6.eventapi.EventTarget;
 import java.util.ArrayList;
@@ -243,7 +237,6 @@ public final class AutoTrap extends Module {
          .min(Comparator.comparingDouble(var0 -> minecraftClient3.player.squaredDistanceTo(var0) - (var0 == Aura.aura.var11813() ? 100 : 0)))
          .orElse(null);
    }
-
 
    public interface PlacementRule {
       BlockHitResult isRotate(Rotation var1);
