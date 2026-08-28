@@ -3,13 +3,6 @@ package org.zenith.module.misc;
 import org.zenith.module.Category;
 import org.zenith.module.Module;
 import org.zenith.module.ModuleInfo;
-import org.zenith.module.ModuleManager;
-import org.zenith.module.combat.*;
-import org.zenith.module.movement.*;
-import org.zenith.module.player.*;
-import org.zenith.module.render.*;
-import org.zenith.module.misc.*;
-
 
 import net.minecraft.item.Item;
 import com.darkmagician6.eventapi.EventTarget;
@@ -182,7 +175,6 @@ public final class ClickAction extends Module {
    public KeySetting double19() {
       return this.expBind;
    }
-
 
    public record ItemAction(Item item5, KeySetting stringSetting22, BooleanValue var42) {
       public Item double21() {
