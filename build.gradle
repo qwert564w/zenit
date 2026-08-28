@@ -71,6 +71,7 @@ loom {
             client()
             name 'Zenith Client'
             runDir 'run'
+            vmArgs '-Xmx2G', '-Dfile.encoding=UTF-8'
         }
     }
 }
@@ -94,7 +95,8 @@ java {
     withSourcesJar()
 }
 
-jar {
+tasks.named('jar', Jar).configure {
+    dependsOn sanitizeShadedRuntime
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 
     from({ zipTree(sanitizeShadedRuntime.get().archiveFile.get().asFile) }) {
@@ -106,6 +108,11 @@ jar {
             into 'META-INF/jars'
         }
     }
+}
+
+// Ensure remapJar waits for sanitization when used by build
+tasks.matching { it.name == 'remapJar' }.configureEach {
+    dependsOn sanitizeShadedRuntime
 }
 
 publishing {
