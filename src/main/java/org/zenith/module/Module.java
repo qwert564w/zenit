@@ -1,11 +1,5 @@
 package org.zenith.module;
 
-import org.zenith.module.combat.*;
-import org.zenith.module.movement.*;
-import org.zenith.module.player.*;
-import org.zenith.module.render.*;
-import org.zenith.module.misc.*;
-
 import com.darkmagician6.eventapi.EventManager;
 import com.google.gson.JsonObject;
 import java.util.Arrays;
@@ -20,8 +14,8 @@ import org.zenith.core.HolyWorldClient;
 import org.zenith.core.SessionFlag;
 import org.zenith.event.ModuleToggleEvent;
 import org.zenith.rotation.RotationManager;
-import org.zenith.setting.SettingGroup;
 import org.zenith.setting.Setting;
+import org.zenith.setting.SettingGroup;
 
 public class Module implements Comparable<Module>, GameService {
    protected ModuleInfo info = this.getClass().getAnnotation(ModuleInfo.class);
